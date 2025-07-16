@@ -42,10 +42,7 @@ git clone https://github.com/Intan-psf/FrontEnd-Carier-Website.git
 
 3️⃣ Import the SQL database (if provided).
 
-4️⃣ Start the web server and open the project in your browser:
 
-```
-http://localhost/your-folder-name
 ```
 
 ### Usage
