@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Center</title>
+    <style>
+        /* General reset */
+        body, h1, h2, h3, p, input, select, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styling */
+        .header {
+            background: url('assets/bg\ atas1.jpg') no-repeat center center/cover; 
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .header p {
+            font-size: 16px;
+        }
+
+        /* Form container */
+        .form-container {
+            background: white;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(47, 115, 76, 0.6);
+            text-align: center;
+        }
+
+        .form-container h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Form styling */
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-form input,
+        .profile-form select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .profile-form input:focus,
+        .profile-form select:focus {
+            outline: none;
+            border-color: #205a40;
+        }
+
+        .btn-create-account {
+            background: #f4c20d; 
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-create-account:hover {
+            background: #d4a10d;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>CareerCenter</h1>
+            <h2>Explore Your Career For The Future</h2>
+            <p>Create opportunities and success</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h3>Lengkapi Profil Anda</h3>
+            <form class="profile-form" id="createAccountForm">
+                <input type="text" name="full_name" placeholder="Nama Lengkap" required>
+                <input type="text" name="NIM" placeholder="NIM" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Jenis Kelamin</option>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="phone" placeholder="No Tlp" required>
+                <input type="text" name="address" placeholder="Alamat" required>
+                <input type="date" name="birth_date" placeholder="Tanggal Lahir" required>
+                <button type="button" class="btn-create-account" onclick="createAccount()">Create Account</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function createAccount() {
+            // Handle form validation and data submission here
+            // For now, just redirect to another page after clicking the button
+
+            // Redirect to the other page (replace 'index3.html' with your destination URL)
+            window.location.href = "indexhome.html"; 
+        }
+    </script>
+</body>
+</html>

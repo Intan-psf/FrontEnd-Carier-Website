@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kursus AI</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F9F9F9;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #2F734C;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .navbar .profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .navbar .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar .profile img.dropdown-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      display: none;
+      z-index: 10;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: #2F734C;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #F0F0F0;
+    }
+
+    /* Show dropdown menu */
+    .profile:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Search bar */
+    .search-bar {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Kursus cards */
+    .kursus-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .kursus-card {
+      display: flex;
+      gap: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(47, 115, 76, 0.3); /* Bayangan hijau */
+      overflow: hidden;
+      padding: 20px;
+      align-items: center;
+    }
+
+    .kursus-card img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .kursus-card-content {
+      flex: 1;
+    }
+
+    .kursus-card-content h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .kursus-card-content p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .kursus-card-content .btn-mulai {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #FFCD29;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .kursus-card-content .btn-mulai:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <div class="logo">CareerCenter</div>
+      <div class="menu">
+        <a href="indexhome.html">Lowongan</a>
+        <a href="indexhalamankursus.html">Kursus</a>
+      </div>
+    </div>
+    <div class="profile">
+      <a href="indexhalamanprofil.html">
+        <img src="assets/profil.png" alt="Profile Icon">
+      </a>
+      <img src="assets/dropdown.png" alt="Dropdown Icon" class="dropdown-icon">
+      <div class="dropdown-menu">
+        <a href="indexhalamanriwayatkursus.html">Riwayat Kursus</a>
+        <a href="indexhalamanriwayatlamaran.html">Riwayat Lamaran</a>
+        <a href="ind">Log Out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Pencarian">
+  </div>
+
+  <!-- Kursus cards -->
+  <div class="kursus-cards">
+    <div class="kursus-card">
+      <img src="assets/kursus1.png" alt="Kursus 1">
+      <div class="kursus-card-content">
+        <h3>ChatGPT & MidJourney & Gemini: Digital Marketing Assistants</h3>
+        <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers. Gain a grasp of AI to delegate your marketing activities.</p>
+        <p>Durasi: 30 menit</p>
+        <p>Tingkat kesulitan: 8/10</p>
+        <p>Pengajar: Prof. Zaenal Abidin</p>
+        <a href="#" class="btn-mulai">Mulai</a>
+      </div>
+    </div>
+    <div class="kursus-card">
+      <img src="assets/kursus2.png" alt="Kursus 2">
+      <div class="kursus-card-content">
+        <h3>The Complete AI-Powered Copywriting Course & ChatGPT Course</h3>
+        <p>Become a Pro Copywriter with the Complete Copywriting and Content Marketing Course. Use ChatGPT. Get 70+ Pro Templates.</p>
+        <p>Durasi: 25 menit</p>
+        <p>Tingkat kesulitan: 9/10</p>
+        <p>Pengajar: Prof. Edy Cahyono</p>
+        <a href="#" class="btn-mulai">Mulai</a>
+      </div>
+    </div>
+    <div class="kursus-card">
+      <img src="assets/kursus3.png" alt="Kursus 3">
+      <div class="kursus-card-content">
+        <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+        <p>25+ Generative AI Tools to 10x Business, Productivity, Creativity | Prompt Engineering, ChatGPT, Custom GPTs, Midjourney</p>
+        <p>Durasi: 20 menit</p>
+        <p>Tingkat kesulitan: 7/10</p>
+        <p>Pengajar: Prof. Abbas Setiawan & Dr. Faris Alhakim</p>
+        <a href="#" class="btn-mulai">Mulai</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

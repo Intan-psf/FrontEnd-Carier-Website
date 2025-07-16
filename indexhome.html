@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Center</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #2F734C;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar .left {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Mengurangi jarak antara menu */
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+      border-radius: 5px;
+    }
+
+    .navbar .profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .navbar .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar .profile img.dropdown-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      display: none;
+      z-index: 10;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: #2F734C;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #F0F0F0;
+    }
+
+    /* Show dropdown menu */
+    .profile:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Search bar */
+    .search-bar {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Job cards grid */
+    .job-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .job-card {
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    .job-card img {
+      width: 200px;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .job-card .company-name {
+      background-color: #5D8C71; /* Ubah warna latar belakang menjadi hijau */
+      color: white;
+      padding: 8px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      width: 200px; /* Ukuran kotak sama dengan gambar */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .job-card button {
+      background-color: #FFC107;
+      border: none;
+      padding: 10px 20px;
+      color: #fffdfd;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .job-card button:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .job-card button:active {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <div class="logo">CareerCenter</div>
+      <div class="menu">
+        <a href="indexhome.html">Lowongan</a>
+        <a href="indexhalamankursus.html">Kursus</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <!-- Wrap the profile image with an anchor tag to navigate to the profile page -->
+      <a href="indexhalamanprofil.html">
+        <img src="assets/profil.png" alt="Profile Icon">
+      </a>
+      <img src="assets/dropdown.png" alt="Dropdown Icon" class="dropdown-icon">
+      <div class="dropdown-menu">
+        <a href="indexhalamanriwayatkursus.html">Riwayat Kursus</a>
+        <a href="indexhalamanriwayatlamaran.html">Riwayat Lamaran</a>
+        <a href="indexhalamanutama.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Pencarian">
+  </div>
+
+  <!-- Job cards -->
+  <div class="job-cards">
+    <div class="job-card">
+      <img src="assets/astra.jpg" alt="Astra International">
+      <div class="company-name">PT. ASTRA</div>
+      <a href="indexhalamanlamar.html">
+      <button>Lamar</button>
+    </a>
+    </div>
+    <div class="job-card">
+      <img src="assets/google.jpg" alt="Google">
+      <div class="company-name">Google</div>
+      <a href="indexhalamanlamar.html">
+      <button>Lamar</button>
+    </a>
+    </div>
+    <div class="job-card">
+      <img src="assets/pertamina.png" alt="Pertamina">
+      <div class="company-name">PT. PERTAMINA</div>
+      <a href="indexhalamanlamar.html">
+      <button>Lamar</button>
+    </a>
+    </div>
+    <div class="job-card">
+      <img src="assets/unilever.png" alt="Unilever">
+      <div class="company-name">PT. UNILEVER</div>
+      <a href="indexhalamanlamar.html">
+      <button>Lamar</button>
+    </a>
+    </div>
+  </div>
+</body>
+</html>

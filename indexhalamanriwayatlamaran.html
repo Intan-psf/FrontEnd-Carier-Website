@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lowongan Kerja</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F4F7F6;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #2F734C;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .navbar .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    .navbar .profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .navbar .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar .profile img.dropdown-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      display: none;
+      z-index: 10;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: #2F734C;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #F0F0F0;
+    }
+
+    /* Show dropdown menu */
+    .profile:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Search bar styling */
+    .searchbar {
+      margin: 20px auto;
+      max-width: 900px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .searchbar input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #D4DED8;
+      border-radius: 5px;
+      background-color: #F4F7F6;
+      color: #6A6A6A;
+    }
+
+    /* Job listings */
+    .job-listings {
+      margin: 20px auto;
+      max-width: 900px;
+    }
+
+    .job-card {
+      background-color: white;
+      border: 1px solid #2F734C;
+      border-radius: 10px;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .job-content {
+      flex: 1;
+    }
+
+    .job-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2F734C;
+    }
+
+    .job-position {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .job-description {
+      font-size: 14px;
+      color: #6A6A6A;
+      margin-bottom: 10px;
+    }
+
+    .job-info {
+      font-size: 14px;
+      color: #6A6A6A;
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Tombol Lamar tetap kotak dengan ukuran tetap */
+    .apply-btn {
+      background-color: #FFB800;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      min-width: 120px; /* Menjaga lebar tombol tetap */
+      display: inline-block;
+    }
+
+    .apply-btn:hover {
+      background-color: #FFA000;
+    }
+
+    /* Menyusun info dan tombol dalam satu baris */
+    .job-content .job-info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <div class="logo">CareerCenter</div>
+      <div class="menu">
+        <a href="indexhome.html">Lowongan</a>
+        <a href="indexhalamankursus.html">Kursus</a>
+      </div>
+    </div>
+
+    <div class="profile">
+        <a href="indexhalamanprofil.html">
+      <img src="assets/profil.png" alt="Profile Icon">
+    </a>
+      <img src="assets/dropdown.png" alt="Dropdown Icon" class="dropdown-icon">
+      <div class="dropdown-menu">
+        <a href="indexhalamanriwayatkursus.html">Riwayat Kursus</a>
+        <a href="indexhalamanriwayatlamaran.html">Riwayat Lamaran</a>
+        <a href="indexhalamanutama.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="searchbar">
+    <input type="text" placeholder="Pencarian...">
+  </div>
+
+  <!-- Job Listings -->
+  <div class="job-listings">
+    <!-- Astra -->
+    <div class="job-card">
+      <img src="assets/astra.jpg" alt="Astra">
+      <div class="job-content">
+        <div class="job-title">PT. ASTRA Internasional</div>
+        <div class="job-position">Posisi: Engineering (Maintenance Supervisor)</div>
+        <div class="job-description">
+          Bertanggung jawab atas perawatan dan pengoperasian peralatan pabrik, serta manajemen operasional.
+        </div>
+        <div class="job-info-container">
+          <div class="job-info">
+            Lokasi: Jakarta Selatan<br>
+            Status: Full-time<br>
+            Kisaran Gaji: Rp5.000.000 - Rp12.000.000/bulan
+          </div>
+          <button class="apply-btn">Sukses Terkirim</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google -->
+    <div class="job-card">
+      <img src="assets/google.jpg" alt="Google">
+      <div class="job-content">
+        <div class="job-title">Google</div>
+        <div class="job-position">Posisi: Software Engineering (Frontend Developer)</div>
+        <div class="job-description">
+          Mengembangkan antarmuka aplikasi yang user-friendly dan responsif dengan teknologi modern.
+        </div>
+        <div class="job-info-container">
+          <div class="job-info">
+            Lokasi: Jakarta Pusat<br>
+            Status: Full-time<br>
+            Kisaran Gaji: Rp15.000.000 - Rp25.000.000/bulan
+          </div>
+          <button class="apply-btn">Sukses Terkirim</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pertamina -->
+    <div class="job-card">
+      <img src="assets/pertamina.png" alt="Pertamina">
+      <div class="job-content">
+        <div class="job-title">PT. Pertamina</div>
+        <div class="job-position">Posisi: Finance (Financial Analyst)</div>
+        <div class="job-description">
+          Melakukan analisis keuangan perusahaan untuk mendukung pengambilan keputusan strategis.
+        </div>
+        <div class="job-info-container">
+          <div class="job-info">
+            Lokasi: Balikpapan, Kalimantan Timur<br>
+            Status: Full-time<br>
+            Kisaran Gaji: Rp12.000.000 - Rp18.000.000/bulan
+          </div>
+          <button class="apply-btn">Sukses Terkirim</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unilever -->
+    <div class="job-card">
+      <img src="assets/unilever.png" alt="Unilever">
+      <div class="job-content">
+        <div class="job-title">PT. Unilever</div>
+        <div class="job-position">Posisi: Marketing (Brand Manager)</div>
+        <div class="job-description">
+          Memimpin strategi pemasaran untuk membangun merek yang kuat.
+        </div>
+        <div class="job-info-container">
+          <div class="job-info">
+            Lokasi: Surabaya, Jawa Timur<br>
+            Status: Full-time<br>
+            Kisaran Gaji: Rp10.000.000 - Rp20.000.000/bulan
+          </div>
+          <button class="apply-btn">Sukses Terkirim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
